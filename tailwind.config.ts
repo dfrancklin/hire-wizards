@@ -1,6 +1,8 @@
 import { join } from 'path';
 
 import { skeleton } from '@skeletonlabs/tw-plugin';
+import forms from '@tailwindcss/forms';
+
 import type { Config } from 'tailwindcss';
 
 import { defaultTheme } from './skeleton-theme';
@@ -14,7 +16,7 @@ const config = {
 	theme: {
 		extend: {}
 	},
-	plugins: [skeleton({ themes: { custom: [defaultTheme] } })]
+	plugins: [forms, skeleton({ themes: { custom: [defaultTheme] } })]
 } satisfies Config;
 
 export default config;
